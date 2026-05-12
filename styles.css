@@ -1,6 +1,19 @@
 :root {
-  --navy: #082b7a;
-  --blue: #1140ad;
+  --navy: #0a2f8f;
+  --blue: #0d47d9;
+  --light-blue: #edf3ff;
+  --yellow: #ffd400;
+  --yellow-soft: #ffe666;
+  --green: #1ea75b;
+  --red: #ef3b2d;
+  --text: #10213f;
+  --muted: #5b6780;
+  --white: #ffffff;
+  --bg: #f5f7fb;
+  --border: rgba(16, 33, 63, 0.09);
+  --shadow: 0 18px 50px rgba(8, 43, 122, 0.08);
+  --radius: 28px;
+}
   --light-blue: #edf3ff;
   --yellow: #ffd400;
   --yellow-soft: #ffe666;
