@@ -1,1 +1,313 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de productos | SERVIVEMKA 2618 CA</title>
+    <meta
+      name="description"
+      content="Catálogo de productos de SERVIVEMKA 2618 CA."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .catalog-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0a2f8f 0%, #0d47d9 70%);
+        padding: 3rem 0;
+      }
 
+      .catalog-box {
+        width: min(1100px, calc(100% - 2rem));
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 30px;
+        padding: 2.5rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      }
+
+      .catalog-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .catalog-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .catalog-brand img {
+        width: 110px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .catalog-top h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        color: #10213f;
+        line-height: 1.05;
+      }
+
+      .catalog-top p {
+        margin: 0.8rem 0 0;
+        color: #5b6780;
+        max-width: 720px;
+        line-height: 1.8;
+      }
+
+      .catalog-actions {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      .catalog-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0.9rem 1.3rem;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .catalog-btn.primary {
+        background: #ffd400;
+        color: #0a2f8f;
+      }
+
+      .catalog-btn.secondary {
+        border: 1.5px solid #0a2f8f;
+        color: #0a2f8f;
+        background: #ffffff;
+      }
+
+      .catalog-hero {
+        margin-top: 2rem;
+        border-radius: 24px;
+        padding: 2rem;
+        background: #edf3ff;
+      }
+
+      .catalog-hero h2 {
+        margin: 0;
+        color: #0a2f8f;
+        font-size: 2rem;
+      }
+
+      .catalog-hero p {
+        margin-top: 0.8rem;
+        color: #5b6780;
+        line-height: 1.8;
+      }
+
+      .catalog-grid {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .catalog-card {
+        background: #ffffff;
+        border: 1px solid rgba(16, 33, 63, 0.08);
+        border-radius: 24px;
+        padding: 1.5rem;
+        box-shadow: 0 12px 30px rgba(8, 43, 122, 0.06);
+      }
+
+      .catalog-card .icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .catalog-card:nth-child(1) .icon {
+        background: rgba(17, 64, 173, 0.12);
+      }
+
+      .catalog-card:nth-child(2) .icon {
+        background: rgba(255, 212, 0, 0.2);
+      }
+
+      .catalog-card:nth-child(3) .icon {
+        background: rgba(30, 167, 91, 0.12);
+      }
+
+      .catalog-card:nth-child(4) .icon {
+        background: rgba(239, 59, 45, 0.12);
+      }
+
+      .catalog-card:nth-child(5) .icon {
+        background: rgba(17, 64, 173, 0.12);
+      }
+
+      .catalog-card:nth-child(6) .icon {
+        background: rgba(255, 212, 0, 0.2);
+      }
+
+      .catalog-card h3 {
+        margin: 0;
+        color: #10213f;
+        font-size: 1.3rem;
+      }
+
+      .catalog-card p {
+        margin: 0.8rem 0 0;
+        color: #5b6780;
+        line-height: 1.7;
+      }
+
+      .catalog-note {
+        margin-top: 2rem;
+        background: #0a2f8f;
+        color: #ffffff;
+        border-radius: 24px;
+        padding: 1.5rem;
+      }
+
+      .catalog-note strong {
+        color: #ffd400;
+      }
+
+      @media (max-width: 900px) {
+        .catalog-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .catalog-box {
+          padding: 1.4rem;
+        }
+
+        .catalog-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .catalog-brand {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="catalog-page">
+      <section class="catalog-box">
+        <div class="catalog-top">
+          <div>
+            <div class="catalog-brand">
+              <img src="public/logo-servivemka.jpg" alt="Logo SERVIVEMKA 2618 CA" />
+              <div>
+                <h1>Catálogo de productos</h1>
+                <p>
+                  Aquí podrás mostrar tus productos por categorías, con imágenes,
+                  descripciones, precios, promociones y enlaces de contacto.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-actions">
+            <a class="catalog-btn secondary" href="index.html">Volver al inicio</a>
+            <a
+              class="catalog-btn primary"
+              href="https://wa.me/584243669016?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20cat%C3%A1logo%20de%20productos%20de%20SERVIVEMKA%202618%20CA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="catalog-hero">
+          <h2>Próximamente disponible</h2>
+          <p>
+            Esta página queda lista para que luego agreguemos el catálogo real.
+            Podemos organizarlo por categorías como plomería, electricidad,
+            refrigeración, mantenimiento, repuestos, herramientas o promociones.
+          </p>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <div class="icon">💧</div>
+            <h3>Productos de plomería</h3>
+            <p>
+              Espacio reservado para tuberías, conexiones, llaves, accesorios,
+              bombas, válvulas y más.
+            </p>
+          </article>
+
+          <article class="catalog-card">
+            <div class="icon">⚡</div>
+            <h3>Productos eléctricos</h3>
+            <p>
+              Espacio para breakers, cables, interruptores, tomas, tableros,
+              luminarias y otros materiales.
+            </p>
+          </article>
+
+          <article class="catalog-card">
+            <div class="icon">❄️</div>
+            <h3>Refrigeración</h3>
+            <p>
+              Espacio para repuestos, equipos, mantenimiento, accesorios y
+              soluciones de refrigeración.
+            </p>
+          </article>
+
+          <article class="catalog-card">
+            <div class="icon">🛠️</div>
+            <h3>Mantenimiento</h3>
+            <p>
+              Espacio para insumos, repuestos, herramientas y servicios
+              relacionados con mantenimiento general.
+            </p>
+          </article>
+
+          <article class="catalog-card">
+            <div class="icon">🏷️</div>
+            <h3>Promociones</h3>
+            <p>
+              Aquí podrás destacar ofertas, combos, descuentos especiales y
+              productos recomendados.
+            </p>
+          </article>
+
+          <article class="catalog-card">
+            <div class="icon">📦</div>
+            <h3>Nuevos ingresos</h3>
+            <p>
+              Sección ideal para mostrar productos recién agregados al catálogo.
+            </p>
+          </article>
+        </div>
+
+        <div class="catalog-note">
+          <p>
+            <strong>Nota:</strong> esta página ya queda creada como base. Luego
+            la convertimos en un catálogo real con tarjetas de productos,
+            imágenes, botones de compra o consulta, filtros y categorías.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
